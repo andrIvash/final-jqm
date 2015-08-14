@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+    andrew ivaschenko -- developer -- anivash.com    
+    <name> -- <role> -- <twitter>
+
+# THANKS
+    loftblog.ru - видеоуроки по разработке для начинающих и не только
+    loftschool.com  - школа онлайн образования
+    <name>
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5, jQuery, jQuery Mobile, Normalize.css

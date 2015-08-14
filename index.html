@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="css/normalize.css" />
+	<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="favicons/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="favicons/manifest.json">
+	<link rel="shortcut icon" href="favicons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+	<meta name="msapplication-config" content="favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+
+	<link rel="stylesheet" href="css/my-theme.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" /> 
+	<link rel="stylesheet" href="css/main.css" />
+	
+	<script src="js/jquery.min.js"></script>
+	<script>
+		$( document ).bind( "mobileinit", function() {
+			$.support.cors = true;
+			$.mobile.allowCrossDomainPagеs = true; 
+			$.mobile.pushState = false
+		});
+	</script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>	
+	
+	<title>quote app</title>
+</head>
+<body>
+<!-- begin homePage -->
+	<div data-role="page" id="home"    datafullscreen="true" >
+		<div data-role="header" data-position="fixed" >
+			<a href="#" data-icon="gear"  data-transition="slide" class="ui-btn-right">Settings</a>
+			<h1>Quote me ...</h1>
+		</div>
+		<div data-role="main" class="ui-content main-page">
+			<div class="logo-wrap">
+				<div class="logo">
+					<img class="logo-img" src="img/books.png">
+				</div>		
+			</div>
+		</div>
+		<div data-role="footer"  data-id="main-menu" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home" data-transition="slide" class="ui-btn-active ui-state-persist" >Home</a></li>
+					<li><a href="#quotations" data-icon="grid"  data-transition="slide">Quotations</a></li>
+					<li><a href="#about" data-icon="info"  data-transition="slide">About</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+<!-- end homePage -->
+
+<!-- begin quotationPage -->
+	<div data-role="page" id="quotations"   >
+		<div data-role="header"  data-position="fixed" data-add-back-btn="true"  data-back-btn-text="back" data-back-btn-theme="a">
+			<h1><img src="img/book.png" ></h1>
+			<a href="#addData" data-icon="plus"  data-transition="slide" class="ui-btn-right">Add</a>
+		</div>
+		<div data-role="main" class="ui-content">
+			<h3>Quote List</h3>
+			<ul id="list" data-role="listview" data-filter-placeholder="Search quota..." data-inset="true" data-split-icon="forward">
+			</ul>
+		</div>
+		<div data-role="footer" data-id="main-menu" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home"  data-transition="slide">Home</a></li>
+					<li><a href="#quotations" data-icon="grid"  data-transition="slide" class="ui-btn-active ui-state-persist" >Quotations</a></li>
+					<li><a href="#about" data-icon="info"  data-transition="slide">About</a></li>
+				</ul>
+			</div>
+		</div>
+		
+    </div>
+<!-- end quotationPage -->
+
+<!-- begin aboutPage -->
+	<div data-role="page" id="about"  >
+    	<div data-role="header" data-position="fixed" data-add-back-btn="true"  data-back-btn-text="back" data-back-btn-theme="a">
+      		<h1><img src="img/book.png" ></h1>
+    	</div>
+    	<div data-role="main" class="ui-content">
+      		<h3>About</h3>
+      		<div data-role="collapsible">
+        		<h3>Author info</h3>
+	        	<div class="ui-grid-a">
+    	    		<div class="ui-block-a"> <img src="img/myphoto.jpg"></div>
+        			<div class="ui-block-b">Andrey Ivaschenko</div>
+        		</div><!-- /grid-a -->
+	    	</div>
+		    <div data-role="collapsible-set">
+	        	<div data-role="collapsible" data-collapsed="false">
+	    	    	<h3>About App</h3>
+	        		<p>The app allows you to store notes or favorite quotes of famous writers</p>
+	        	</div>
+	          	<div data-role="collapsible" data-collapsed="true">
+	            	<h3>Manual</h3>
+	            	<p>Just save and read your favorite quotes. </p>
+	          	</div>
+	      	</div>
+      		<h4> Feedback </h4>
+	      	
+	        	<ul data-role="listview" data-inset="true" >
+					<li date-role="list-divider" >Shared by</li>
+					<li data-icon="false"><a href="#"> <img src="img/fb.png" class="ui-li-icon"> Facebook </a></li>
+					<li data-icon="false"><a href="#"> <img src="img/tw.png" class="ui-li-icon">Tweeter </a></li>
+					<li data-icon="false"><a href="#"> <img src="img/vk.png" class="ui-li-icon"> Vk </a></li>
+				</ul>
+	      	
+    	</div>
+    	<div data-role="footer" data-id="main-menu" data-position="fixed">
+      		<div data-role="navbar">
+        		<ul>
+            		<li><a href="#home" data-icon="home" data-transition="slide" >Home</a></li>
+            		<li><a href="#quotations" data-icon="grid" data-transition="slide" >Quotations</a></li>
+            		<li><a href="#about" data-icon="info" data-transition="slide" class="ui-btn-active ui-state-persist" >About</a></li>
+        		</ul>
+      		</div>
+    	</div>	
+		
+  	</div>
+<!-- end aboutPage -->
+
+
+	<!-- begin add DataPage -->
+	<div data-role="page" id="addData"    datafullscreen="true" >
+		<div data-role="header" data-position="fixed" data-add-back-btn="true"  data-back-btn-text="back" data-back-btn-theme="a">
+			<h1>Add Quote ...</h1>
+		</div>
+
+		<div data-role="main" class="ui-content" >
+			<form action="#home" method="post" id="addForm">
+				
+				<label for="quote-title">Title:</label>
+				<input type="text" name="quote-title" id="quote-title" placeholder="Enter Title" value="">
+				
+				<label for="quote-text">Quotation:</label>
+				<textarea cols="40" rows="4" name="quote-text" id="quote-text" placeholder="Enter Text" ></textarea>
+				
+				<label for="quote-author">Author/Book:</label>
+				<input type="text" name="quote-author" id="quote-author" placeholder="Enter Author/Book" value="">
+			
+				<div data-role="controlgroup" data-type="horizontal">
+					<input type="submit" value="Submit" data-theme="b">
+					<input type="reset" value="Reset">
+				</div>
+			
+			</form>	
+			
+		</div>
+
+		<div data-role="footer"   data-position="fixed">
+			
+		</div>
+
+	</div>
+<!-- end homePage -->	
+<!--custom event code -->
+	<script src="js/plugin.js"></script>
+	<script src="js/main.js"></script>
+
+	
+</body>
+</html>

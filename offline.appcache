@@ -1,0 +1,64 @@
+CACHE MANIFEST
+# 2015-08-5:v7
+
+# Explicitly cached 'master entries'
+CACHE:
+
+bower/normalize.css/normalize.css
+css/my-theme.min.css
+css/jquery.mobile.icons.min.css
+css/main.css
+http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css
+
+bower/jquery/dist/jquery.js
+http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js
+js/plugin.js
+
+favicons/android-chrome-144x144.png
+favicons/android-chrome-192x192.png
+favicons/android-chrome-36x36.png
+favicons/android-chrome-48x48.png
+favicons/android-chrome-72x72.png
+favicons/android-chrome-96x96.png
+favicons/apple-touch-icon-114x114.png
+favicons/apple-touch-icon-120x120.png
+favicons/apple-touch-icon-144x144.png
+favicons/apple-touch-icon-152x152.png
+favicons/apple-touch-icon-180x180.png
+favicons/apple-touch-icon-57x57.png
+favicons/apple-touch-icon-60x60.png
+favicons/apple-touch-icon-72x72.png
+favicons/apple-touch-icon-76x76.png
+favicons/apple-touch-icon-precomposed.png
+favicons/apple-touch-icon.png
+favicons/browserconfig.xml
+favicons/favicon-16x16.png
+favicons/favicon-32x32.png
+favicons/favicon-96x96.png
+favicons/favicon.ico
+favicons/manifest.json
+favicons/mstile-144x144.png
+favicons/mstile-150x150.png
+favicons/mstile-310x150.png
+favicons/mstile-310x310.png
+favicons/mstile-70x70.png
+
+img/books.png
+img/book.png
+img/myphoto.jpg
+img/fb.png
+img/tw.png
+img/vk.png
+
+js/main.js
+js/plugin.js
+
+# Resources that require the user to be online.
+NETWORK:
+https://developers.facebook.com/docs/plugins/
+http://api.twitter.com
+
+# offline.html will be served in place of all other .html files
+FALLBACK:
+
+*.html /offline.html

@@ -1,0 +1,6 @@
+###
+Options -Indexes
+
+DefaultLanguage ru-RU
+AddDefaultCharset UTF-8
+AddType text/cache-manifest .appcache
